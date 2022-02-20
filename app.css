@@ -19,7 +19,15 @@
 }
 
 :root {
+    --color-primary: #00BFFF;
     --color-light: #FFFFFF;
+    --color-lighter: #F1F1F1;
+    --color-contrast: #999999;
+    --distance-horiz: 25px;
+    --distance-vert: 28px;
+    --border-radius: 5px;
+    --font-current: 16px;
+    --duration: .3s;
 }
 
 * {
@@ -30,11 +38,152 @@
 }
 
 body {
+    overflow: hidden;
     background: var(--color-light);
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+    background: var(--color-contrast);
 }
 
 .container {
     height: 100vh;
     width: 100vw;
+    padding: var(--distance-vert) 0;
     background: var(--color-light);
+}
+
+.task-input {
+    height: 50px;
+    padding: 0 var(--distance-horiz);
+    position: relative;
+}
+
+.task-input i {
+    position: absolute;
+    top: 50%;
+    transform: translate(17px, -50%);
+    color: var(--color-contrast);
+}
+
+.task-input input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: var(--font-current);
+    border: 1px solid var(--color-contrast);
+    border-radius: var(--border-radius);
+    padding: 0 20px 0 53px;
+}
+
+.task-input input::placeholder {
+    color: var(--color-contrast);
+}
+
+.task-input input:focus {
+    border: 1px solid var(--color-primary);
+}
+
+.controls, li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls {
+    padding: var(--distance-vert) var(--distance-horiz);
+    border-bottom: 1px solid var(--color-contrast);
+}
+
+.filters span {
+    margin: 0 8px;
+    font-size: var(--font-current);
+    cursor: pointer;
+}
+
+.filters span:first-child {
+    margin-left: 0;
+}
+
+.filters span.active {
+    color: var(--color-primary);
+}
+
+.controls .clear-btn {
+    padding: 7px 13px;
+    outline: none;
+    font-size: 14px;
+    background: var(--color-primary);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.task-box {
+    margin: var(--distance-vert) var(--distance-horiz);
+}
+
+.task-box .task {
+    list-style: none;
+    font-size: var(--font-current);
+    margin-bottom: var(--distance-vert);
+    padding-bottom: var(--distance-vert);
+    border-bottom: 1px solid var(--color-contrast);
+}
+
+.task-box .task:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.task label {
+    display: flex;
+}
+
+.task label input {
+    margin-top: 6px;
+    margin-right: 12px;
+}
+
+.task .settings {
+    cursor: pointer;
+    position: relative;
+}
+
+.settings .task-menu {
+    position: absolute;
+    right: -5px;
+    padding: 5px 0;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 6px var(--color-contrast);
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform var(--duration) ease;
+    z-index: 2;
+}
+
+.settings:hover .task-menu {
+    transform: scale(1);
+}
+
+.task-menu li {
+    height: 25px;
+    font-size: var(--font-current);
+    margin-bottom: 2px;
+    padding: 17px 15px;
+    justify-content: flex-start;
+}
+
+.task-menu li:last-child {
+    margin-bottom: 0;
+}
+
+.task-menu li:hover {
+    background: var(--color-lighter);
+}
+
+.task-menu li i {
+    padding-right: 8px;
 }
