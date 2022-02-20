@@ -19,7 +19,7 @@
 }
 
 :root {
-    --color-primary: #00BFFF;
+    --color-primary: #006eff;
     --color-light: #FFFFFF;
     --color-lighter: #F1F1F1;
     --color-contrast: #999999;
@@ -114,6 +114,7 @@ body::-webkit-scrollbar {
     padding: 7px 13px;
     outline: none;
     font-size: 14px;
+    color: var(--color-light);
     background: var(--color-primary);
     border: none;
     border-radius: var(--border-radius);
