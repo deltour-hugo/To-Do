@@ -1,7 +1,7 @@
 {
-    "name": "Feel The Beat",
+    "name": "To DO",
     "short_name": "To DO",
-    "description": "ToDO is a little application developped by Hugo Deltour.",
+    "description": "To DO is a little application developped by Hugo Deltour.",
     "icons": [
         {
             "src": "/assets/icons/512x512.png",
