@@ -37,19 +37,23 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html, body {
+    max-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 body {
-    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
     background: var(--color-light);
 }
 
 body::-webkit-scrollbar {
-    width: 7px;
-    background: var(--color-contrast);
+    display: none;
 }
 
 .container {
-    height: 100vh;
-    width: 100vw;
     padding: var(--distance-vert) 0;
     background: var(--color-light);
 }
