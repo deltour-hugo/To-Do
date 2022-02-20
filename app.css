@@ -142,6 +142,10 @@ body::-webkit-scrollbar {
     display: flex;
 }
 
+.task label p.checked {
+    text-decoration: line-through;
+}
+
 .task label input {
     margin-top: 6px;
     margin-right: 12px;
@@ -155,16 +159,18 @@ body::-webkit-scrollbar {
 .settings .task-menu {
     position: absolute;
     right: -5px;
+    top: -25px;
     padding: 5px 0;
+    background: var(--color-light);
     border-radius: var(--border-radius);
     box-shadow: 0 0 6px var(--color-contrast);
     transform: scale(0);
-    transform-origin: top right;
+    transform-origin: right;
     transition: transform var(--duration) ease;
     z-index: 2;
 }
 
-.settings:hover .task-menu {
+.settings .task-menu.show {
     transform: scale(1);
 }
 
