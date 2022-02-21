@@ -2,20 +2,8 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url('../assets/fonts/Poppins/Poppins-Light.ttf');
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'Poppins';
     src: url('../assets/fonts/Poppins/Poppins-Regular.ttf');
     font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../assets/fonts/Poppins/Poppins-SemiBold.ttf');
-    font-weight: 500;
 }
 
 :root {
@@ -34,7 +22,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
+    font-weight: 400;
 }
 
 html, body {

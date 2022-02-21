@@ -1,6 +1,10 @@
-const VERSION = 'V1';
+const BASE = location.protocol + "//" + location.host;
+const VERSION = 'V2';
 const CACHED_FILES = [
-    ""
+    `${BASE}/app.css`,
+    `${BASE}/app.js`,
+    `${BASE}/assets/fonts/Poppins/Poppins-Regular.ttf`,
+    `${BASE}/assets/icons/512x512.png`
 ]
 
 self.addEventListener("install", (event) => {

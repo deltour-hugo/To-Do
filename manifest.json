@@ -1,7 +1,7 @@
 {
-    "name": "To DO",
-    "short_name": "To DO",
-    "description": "To DO is a little application developped by Hugo Deltour.",
+    "name": "To Do",
+    "short_name": "To Do",
+    "description": "To Do is a little application developped by Hugo Deltour.",
     "icons": [
         {
             "src": "/assets/icons/512x512.png",
