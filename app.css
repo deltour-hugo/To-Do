@@ -53,9 +53,14 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.container {
-    padding: var(--distance-vert) 0;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: var(--distance-vert) 0 0 0;
     background: var(--color-light);
+    z-index: 3;
 }
 
 .task-input {
@@ -98,6 +103,7 @@ body::-webkit-scrollbar {
 .controls {
     padding: var(--distance-vert) var(--distance-horiz);
     border-bottom: 1px solid var(--color-contrast);
+    height: 92px;
 }
 
 .filters span {
@@ -126,7 +132,7 @@ body::-webkit-scrollbar {
 }
 
 .task-box {
-    margin: var(--distance-vert) var(--distance-horiz);
+    margin: calc(170px + var(--distance-vert)) var(--distance-vert) var(--distance-horiz);
 }
 
 .task-box .task {
